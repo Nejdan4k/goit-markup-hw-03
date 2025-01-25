@@ -25,6 +25,9 @@ p {
 a {
   text-decoration: none;
 }
+img{
+  display: block;
+}
 
 /*common*/
 
@@ -32,6 +35,13 @@ a {
   max-width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
+}
+.introduction,
+.goals,
+.team,
+.portfolio{
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 /* header*/
@@ -114,13 +124,17 @@ a {
   .contacts-link:focus {
     color: #404bbf;
   }
-  
+
+  /* Section_1*/
+
   .introduction{
+    padding: 188px 0;;
+    background-color:#2e2f42;
     
-    background-color:#2e2f42
   
   }
   .title{
+    max-width: 496px;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: 56px;
@@ -128,6 +142,8 @@ a {
     letter-spacing: 0.02em;
     text-align: center;
     color: #fff;  
+    
+
   }
   .btn-order{
 background-color: #4d5ae5;
@@ -137,13 +153,36 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.04em;
 color: #fff;
+cursor: pointer;
+text-align: center;
+padding: 16px 32px;
+border: none;
+height: 56px;
+min-width: 169px;
+border-radius: 4px;
+  }
+  .introduction-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
   }
   
   .btn-order:hover,
   .btn-order:focus{
   background-color: #404BBF;
   color: #FFFFFF;
-    cursor: pointer;
+    
+  }
+
+  /* Section_2*/
+  .goals{
+    display: flex;
+    gap: 24px;
+  }
+  .goals-container{
+    display: flex;
+    gap: 24px;
   }
 
   .section-title{
@@ -152,6 +191,30 @@ color: #fff;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    position: absolute;
+       width: 1px;
+       height: 1px;
+       margin: -1px;
+       border: 0;
+       padding: 0;
+       white-space: nowrap;
+       clip-path: inset(100%);
+       clip: rect(0 0 0 0);
+       overflow: hidden;
+  }
+  .goals-item{
+    flex-basis: calc((100% - 72px) / 4);
+  }
+  .goals-list{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #2e2f42;
+    letter-spacing: 0,02em;
+    margin-bottom: 8px;
+    display: flex;
+    gap: 24px;
+
   }
   .goals-item-title{
     font-weight:500;
@@ -159,17 +222,25 @@ color: #fff;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
   }
   
   .goals-item-text{
     line-height: 1.5;
     letter-spacing: 0.02em;
+    font-size: 16px;
   }
+
+  /* Section_3*/
 
   .team{
     background-color: #F4F4FD;
+    display: flex;
+    gap: 24px;
   }
   .team-title{
+    margin-bottom: 72px;
+    font font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
     text-align: center;
@@ -183,13 +254,58 @@ color: #fff;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    text-align: center;
+    margin-bottom: 8px;
   }
-  
+  .team-list{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 16px;
+    border-radius: 0 0 4px 4px;
+  flex-basis: calc((100% - 72px) / 4);
+  display: flex;
+    gap: 24px;
+
+  }
+  .team-role{
+    text-align: center;
+    font-size: 16px;
+  }
   
 .team-item{
   line-height: 1.5;
   letter-spacing: 0.02em;
   background-color: #FFFFFF;
+  border-radius: 0 0 4px 4px;
+  flex-basis: calc((100% - 72px) / 4);
+}
+.team-card{
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.team-container{
+display: flex;
+    gap: 24px;
+  }
+/* Section_4*/
+.portfolio, 
+.portfolio-list,
+.portfolio-container{
+display: flex;
+flex-wrap: wrap;
+row-gap: 48px;
+column-gap: 24px;
+} 
+.portfolio, 
+.portfolio-item, 
+.portfolio-container, 
+.portfolio-list{
+  flex-basis: calc((100% - 48px) / 3);
 }
 
 .portfolio-title{
@@ -201,22 +317,60 @@ color: #fff;
   color: #2e2f42;
   background-color:#FFFFFF
 }
+.portfolio-list{
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
 .performed{
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .product-type{
   line-height: 1.5;
   letter-spacing: 0.02em;
+  font-size: 16px;
 }
+.portfolio-card{
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
+/* footer*/
+
 .page-footer{
   background-color:#2e2f42;
+  padding: 100px 0;
 }
 .for-you{
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color:#F4F4FD
+  color:#F4F4FD;
+  display: block;
+  max-width: 264px;
+}
+.footer-logo{
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4d5ae5;
+  text-decoration: none;
+  margin-right: 76px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.logo-part{
+  color: #f4f4fd;
 }
